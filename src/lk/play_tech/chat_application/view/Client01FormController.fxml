@@ -9,11 +9,10 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-
 <AnchorPane prefHeight="677.0" prefWidth="450.0" style="-fx-background-color: linear-gradient(to top, #2196f3, #1d86da, #1876c2, #1367ab, #0e5894);" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.play_tech.chat_application.view.Client01FormController">
    <children>
       <ScrollPane fx:id="msgContext" layoutX="39.0" layoutY="105.0" opacity="0.76" prefHeight="468.0" prefWidth="359.0" style="-fx-background-color: #8baec9;" />
-      <Label layoutX="170.0" layoutY="41.0" styleClass="clientsName" text="Client 01" textFill="WHITE">
+      <Label layoutX="170.0" layoutY="41.0" style="-fx-font-family: Poppins; -fx-font-weight: 700;" styleClass="clientsName" text="Client 01" textFill="WHITE">
          <font>
             <Font name="Poppins SemiBold" size="26.0" />
          </font>
@@ -23,10 +22,15 @@
             <Image url="@../assets/power.png" />
          </image>
       </ImageView>
-      <AnchorPane layoutX="39.0" layoutY="598.0" prefHeight="53.0" prefWidth="359.0" style="-fx-background-color: #fff;">
+      <AnchorPane layoutX="39.0" layoutY="592.0" prefHeight="38.0" prefWidth="359.0" style="-fx-background-color: #fff#b1cbde; -fx-background-radius: 20;">
          <children>
-            <FontAwesomeIconView glyphName="smile" layoutX="14.0" layoutY="46.0" size="50" text="" wrappingWidth="46.0" />
-            <TextField fx:id="txtMessage" layoutX="122.0" layoutY="-1.0" prefHeight="61.0" prefWidth="187.0" />
+            <FontAwesomeIconView fill="#2196f3" glyphName="HEART" layoutX="253.0" layoutY="29.0" size="20" wrappingWidth="28.999990224838257" />
+            <TextField fx:id="txtMessage" layoutX="4.0" layoutY="1.0" prefHeight="42.0" prefWidth="243.0" promptText="Enter Message Here ..." style="-fx-background-color: transparent;">
+               <font>
+                  <Font size="13.0" />
+               </font></TextField>
+            <FontAwesomeIconView fill="#2196f3" glyphName="CAMERA" layoutX="281.0" layoutY="29.0" size="20" wrappingWidth="28.999990224838257" />
+            <FontAwesomeIconView fill="#0867c6" glyphName="SEND" layoutX="317.0" layoutY="30.0" size="25" wrappingWidth="28.999990224838257" />
          </children>
       </AnchorPane>
    </children>
