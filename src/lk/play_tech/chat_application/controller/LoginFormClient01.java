@@ -1,4 +1,4 @@
 package lk.play_tech.chat_application.controller;
 
-public class Client04FormController {
+public class LoginFormClient01 {
 }
