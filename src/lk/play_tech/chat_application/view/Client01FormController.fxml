@@ -17,20 +17,20 @@
             <Font name="Poppins SemiBold" size="26.0" />
          </font>
       </Label>
-      <ImageView fitHeight="38.0" fitWidth="29.0" layoutX="407.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="38.0" fitWidth="29.0" layoutX="407.0" layoutY="14.0" onMouseClicked="#btnExitOnAction" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../assets/power.png" />
          </image>
       </ImageView>
       <AnchorPane layoutX="39.0" layoutY="592.0" prefHeight="38.0" prefWidth="359.0" style="-fx-background-color: #fff#b1cbde; -fx-background-radius: 20;">
          <children>
-            <FontAwesomeIconView fill="#2196f3" glyphName="HEART" layoutX="253.0" layoutY="29.0" size="20" wrappingWidth="28.999990224838257" />
+            <FontAwesomeIconView fill="#2196f3" glyphName="HEART" layoutX="253.0" layoutY="29.0" onMouseClicked="#btnEmojiOnAction" size="20" wrappingWidth="28.999990224838257" />
             <TextField fx:id="txtMessage" layoutX="4.0" layoutY="1.0" prefHeight="42.0" prefWidth="243.0" promptText="Enter Message Here ..." style="-fx-background-color: transparent;">
                <font>
                   <Font size="13.0" />
                </font></TextField>
-            <FontAwesomeIconView fill="#2196f3" glyphName="CAMERA" layoutX="281.0" layoutY="29.0" size="20" wrappingWidth="28.999990224838257" />
-            <FontAwesomeIconView fill="#0867c6" glyphName="SEND" layoutX="317.0" layoutY="30.0" size="25" wrappingWidth="28.999990224838257" />
+            <FontAwesomeIconView fill="#2196f3" glyphName="CAMERA" layoutX="285.0" layoutY="29.0" onMouseClicked="#btnImageChooserOnAction" size="20" wrappingWidth="28.999990224838257" />
+            <FontAwesomeIconView fill="#0867c6" glyphName="SEND" layoutX="317.0" layoutY="30.0" onMouseClicked="#btnSendOnAction" size="25" wrappingWidth="28.999990224838257" />
          </children>
       </AnchorPane>
       <AnchorPane fx:id="emoji" layoutX="181.0" layoutY="526.0" prefHeight="74.0" prefWidth="132.0" />

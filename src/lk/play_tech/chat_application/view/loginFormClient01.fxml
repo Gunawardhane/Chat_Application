@@ -15,7 +15,7 @@
          </image>
       </ImageView>
       <Text fx:id="welcome" fill="#2196f3" layoutX="144.0" layoutY="75.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-family: Poppins; -fx-font-size: 30px; -fx-font-weight: 700;" styleClass="welcome" text="WELCOME" wrappingWidth="199.0000021457672" />
-      <TextField layoutX="126.0" layoutY="336.0" promptText="Enter your Name :" />
-      <Button layoutX="169.0" layoutY="395.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="102.0" style="-fx-font-family: Poppins; -fx-font-size: 15px; -fx-font-weight: 700;" styleClass="loginButton" stylesheets="@../assets/styles.css" text="Login" textAlignment="CENTER" textFill="WHITE" />
+      <TextField fx:id="txtName" layoutX="126.0" layoutY="336.0" promptText="Enter your Name :" />
+      <Button layoutX="169.0" layoutY="395.0" mnemonicParsing="false" onAction="#btnLoginOnAction" prefHeight="42.0" prefWidth="102.0" style="-fx-font-family: Poppins; -fx-font-size: 15px; -fx-font-weight: 700;" styleClass="loginButton" stylesheets="@../assets/styles.css" text="Login" textAlignment="CENTER" textFill="WHITE" />
    </children>
 </AnchorPane>
