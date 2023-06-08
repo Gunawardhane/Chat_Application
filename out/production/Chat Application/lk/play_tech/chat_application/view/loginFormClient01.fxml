@@ -7,7 +7,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane prefHeight="500.0" prefWidth="438.0" styleClass="border" stylesheets="@../assets/styles.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.play_tech.chat_application.controller.LoginFormClient01">
+<AnchorPane fx:id="loginContext" prefHeight="500.0" prefWidth="438.0" styleClass="border" stylesheets="@../assets/styles.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.play_tech.chat_application.controller.LoginFormClient01">
    <children>
       <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="144.0" layoutY="121.0" pickOnBounds="true" preserveRatio="true">
          <image>
@@ -15,7 +15,7 @@
          </image>
       </ImageView>
       <Text fx:id="welcome" fill="#2196f3" layoutX="144.0" layoutY="75.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-family: Poppins; -fx-font-size: 30px; -fx-font-weight: 700;" styleClass="welcome" text="WELCOME" wrappingWidth="199.0000021457672" />
-      <TextField layoutX="126.0" layoutY="336.0" promptText="Enter your Name :" />
-      <Button layoutX="169.0" layoutY="395.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="102.0" style="-fx-font-family: Poppins; -fx-font-size: 15px; -fx-font-weight: 700;" styleClass="loginButton" stylesheets="@../assets/styles.css" text="Login" textAlignment="CENTER" textFill="WHITE" />
+      <TextField fx:id="txtName" layoutX="126.0" layoutY="336.0" promptText="Enter your Name :" />
+      <Button layoutX="169.0" layoutY="395.0" mnemonicParsing="false" onAction="#btnLoginOnAction" prefHeight="42.0" prefWidth="102.0" style="-fx-font-family: Poppins; -fx-font-size: 15px; -fx-font-weight: 700;" styleClass="loginButton" stylesheets="@../assets/styles.css" text="Login" textAlignment="CENTER" textFill="WHITE" />
    </children>
 </AnchorPane>

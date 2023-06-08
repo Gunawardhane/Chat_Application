@@ -47,7 +47,7 @@ public class Client01FormController {
         msgContext.vvalueProperty().bind(context.heightProperty());
         msgContext.setHbarPolicy(ScrollPane.ScrollBarPolicy.NEVER);
         msgContext.setVbarPolicy(ScrollPane.ScrollBarPolicy.NEVER);
-        lblClient.setText(LoginForm01Controller.name);
+        lblClient.setText(LoginFormClient01.name);
 
         new Thread(() -> {
             try {
@@ -76,7 +76,7 @@ public class Client01FormController {
                                 context.getChildren().add(imageView);
                                 i += 150;
                             } else if (message.startsWith(LoginFormClient01.name)) {
-                                message = message.replace(LoginForm01Controller.name, "You");
+                                message = message.replace(LoginFormClient01.name, "You");
                                 Label label = new Label(message);
                                 label.setStyle(" -fx-font-family: Ubuntu; -fx-font-size: 20px; -fx-background-color: #85b6ff; -fx-text-fill: #5c5c5c");
                                 label.setLayoutY(i);
@@ -104,60 +104,9 @@ public class Client01FormController {
             }
         });
 
-//        new Thread(() -> {
-//            try {
-//                imgSocket = new Socket("localhost", PORT + 5);
-//                while (true) {
-//                    imgOutputStream = imgSocket.getOutputStream();
-//                    imgInputStream = imgSocket.getInputStream();
-//
-//                    byte[] sizeAr = new byte[4];
-//                    imgInputStream.read(sizeAr);
-//                    int size = ByteBuffer.wrap(sizeAr).asIntBuffer().get();
-//
-//                    byte[] imageAr = new byte[size];
-//                    imgInputStream.read(imageAr);
-//
-//                    BufferedImage image = ImageIO.read(new ByteArrayInputStream(imageAr));
-//
-//                    System.out.println("Received " + image.getHeight() + "x" + image.getWidth() + ": " + System.currentTimeMillis());
-//                    ImageIO.write(image, "jpg", new File("/media/sandu/0559F5C021740317/GDSE/Project_Zone/IdeaProjects/INP_Course_Work/src/lk/play_tech/chat_application/bo/test1.jpg"));
-//                    BufferedImage sendImage = ImageIO.read(new File("/media/sandu/0559F5C021740317/GDSE/Project_Zone/IdeaProjects/INP_Course_Work/src/lk/play_tech/chat_application/bo/test1.jpg"));
-//
-//                    Platform.runLater(new Runnable() {
-//                        @Override
-//                        public void run() {
-//                            Image img = SwingFXUtils.toFXImage(sendImage, null);
-//                            ImageView imageView = new ImageView(img);
-//                            imageView.setFitHeight(150);
-//                            imageView.setFitWidth(150);
-//                            imageView.setLayoutY(100);
-//                            context.getChildren().add(imageView);
-//                            i += 120;
-//                        }
-//                    });
-//                }
-//
-//            } catch (IOException e) {
-//                e.printStackTrace();
-//            }
-//        }).start();
     }
 
     public void btnSendOnAction(MouseEvent actionEvent) throws IOException {
-////        if (isImageChoose){
-//            BufferedImage image = ImageIO.read(new File(path));
-//
-//            ByteArrayOutputStream byteArrayOutputStream = new ByteArrayOutputStream();
-//            ImageIO.write(image, "png", byteArrayOutputStream);
-//
-//            byte[] size = ByteBuffer.allocate(4).putInt(byteArrayOutputStream.size()).array();
-//            dataOutputStream.write(size);
-//            dataOutputStream.write(byteArrayOutputStream.toByteArray());
-//            dataOutputStream.flush();
-////        }else {
-////
-////        }
         sendMessage();
     }
 

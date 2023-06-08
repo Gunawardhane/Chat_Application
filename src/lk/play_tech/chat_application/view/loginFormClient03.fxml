@@ -7,7 +7,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane prefHeight="500.0" prefWidth="438.0" styleClass="border" stylesheets="@../assets/styles.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.play_tech.chat_application.controller.LoginFormClient03">
+<AnchorPane fx:id="loginContext" prefHeight="500.0" prefWidth="438.0" styleClass="border" stylesheets="@../assets/styles.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.play_tech.chat_application.controller.LoginFormClient03">
    <children>
       <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="144.0" layoutY="121.0" pickOnBounds="true" preserveRatio="true">
          <image>
