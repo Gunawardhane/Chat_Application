@@ -114,8 +114,8 @@ public class ServerFormController {
                 Platform.runLater(new Runnable() {
                     @Override
                     public void run() {
-                        Label label = new Label("Server Started...");
-                        label.setStyle("-fx-font-family: Ubuntu; -fx-font-size: 20px;");
+                        Label label = new Label("Server Started..");
+                        label.setStyle("-fx-font-family: Poppins; -fx-font-size: 20px;");
                         label.setLayoutY(i);
                         context.getChildren().add(label);
                         i += 30;
@@ -146,12 +146,12 @@ public class ServerFormController {
                             }else if (message.startsWith("Admin")) {
                                 message = message.replace("Admin", "You");
                                 Label label = new Label(message);
-                                label.setStyle(" -fx-font-family: Ubuntu; -fx-font-size: 20px; -fx-background-color: #85b6ff; -fx-text-fill: #5c5c5c");
+                                label.setStyle(" -fx-font-family: Poppins; -fx-font-size: 20px; -fx-background-color: #85b6ff; -fx-text-fill: #5c5c5c");
                                 label.setLayoutY(i);
                                 context.getChildren().add(label);
                             } else {
                                 Label label = new Label(message);
-                                label.setStyle(" -fx-font-family: Ubuntu; -fx-font-size: 20px; -fx-background-color: #CDB4DB; -fx-text-fill: #5c5c5c");
+                                label.setStyle(" -fx-font-family: Poppins; -fx-font-size: 20px; -fx-background-color: #CDB4DB; -fx-text-fill: #5c5c5c");
                                 label.setLayoutY(i);
                                 context.getChildren().add(label);
                             }
@@ -199,7 +199,7 @@ public class ServerFormController {
 
     public void processTextMessage(Client client, DataInputStream dataInputStream) throws IOException {
         if (dataOutputStream0 != null) {
-            dataOutputStream0.writeUTF("👋\t\t\t" + client.getName() + "  Joined\t\t\t👋".trim());
+            dataOutputStream0.writeUTF("\t\t\t" + client.getName() + "  Joined\t\t\t".trim());
             dataOutputStream0.flush();
         }
 
@@ -209,7 +209,7 @@ public class ServerFormController {
             if (message.equals("exit")) {
                 client.setAccept(null);
                 client.setImgSocket(null);
-                dataOutputStream0.writeUTF("👋\t\t\t" + client.getName() + " left\t\t\t👋".trim());
+                dataOutputStream0.writeUTF("\t\t\t" + client.getName() + " left\t\t\t".trim());
                 dataOutputStream0.flush();
                 client.setServerSocket(null);
                 return;

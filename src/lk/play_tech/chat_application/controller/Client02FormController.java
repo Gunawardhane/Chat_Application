@@ -79,7 +79,7 @@ public class Client02FormController {
                                 context.getChildren().add(imageView);
                                 i += 150;
                             } else if (message.startsWith(LoginFormClient02.name)) {
-                                message = message.replace(LoginFormClient01.name, "You");
+                                message = message.replace(LoginFormClient02.name, "You");
                                 Label label = new Label(message);
                                 label.setStyle(" -fx-font-family: Poppins; -fx-font-size: 20px; -fx-background-color: #85b6ff; -fx-text-fill: #5c5c5c");
                                 label.setLayoutY(i);
