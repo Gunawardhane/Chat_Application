@@ -79,12 +79,12 @@ public class Client03FormController {
                             } else if (message.startsWith(LoginFormClient03.name)) {
                                 message = message.replace(LoginFormClient03.name, "You");
                                 Label label = new Label(message);
-                                label.setStyle(" -fx-font-family: Ubuntu; -fx-font-size: 20px; -fx-background-color: #85b6ff; -fx-text-fill: #5c5c5c");
+                                label.setStyle(" -fx-font-family: Poppins; -fx-font-size: 20px; -fx-background-color: #85b6ff; -fx-text-fill: #5c5c5c");
                                 label.setLayoutY(i);
                                 context.getChildren().add(label);
                             } else {
                                 Label label = new Label(message);
-                                label.setStyle(" -fx-font-family: Ubuntu; -fx-font-size: 20px; -fx-background-color: #CDB4DB; -fx-text-fill: #5c5c5c");
+                                label.setStyle(" -fx-font-family: Poppins; -fx-font-size: 20px; -fx-background-color: #CDB4DB; -fx-text-fill: #5c5c5c");
                                 label.setLayoutY(i);
                                 context.getChildren().add(label);
                             }
