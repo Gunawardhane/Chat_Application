@@ -78,7 +78,7 @@ public class Client01FormController {
                             } else if (message.startsWith(LoginFormClient01.name)) {
                                 message = message.replace(LoginFormClient01.name, "You");
                                 Label label = new Label(message);
-                                label.setStyle(" -fx-font-family: Poppins; -fx-font-size: 20px; -fx-background-color: #85b6ff; -fx-text-fill: #5c5c5c");
+                                label.setStyle(" -fx-font-family: Poppins; -fx-font-size: 20px; -fx-background-color: #87a9fa; -fx-text-fill: #000000");
                                 label.setLayoutY(i);
                                 context.getChildren().add(label);
                             } else {
@@ -162,18 +162,25 @@ public class Client01FormController {
         heart.setFitWidth(30);
         heart.setFitHeight(30);
         dialogVbox.getChildren().add(heart);
-        ImageView sadFace = new ImageView(new Image("lk/play_tech/chat_application/assets/sad-face.png"));
-        sadFace.setFitWidth(30);
-        sadFace.setFitHeight(30);
-        dialogVbox.getChildren().add(sadFace);
+//        ImageView sadFace = new ImageView(new Image("lk/play_tech/chat_application/assets/sad-face.png"));
+//        sadFace.setFitWidth(30);
+//        sadFace.setFitHeight(30);
+//        dialogVbox.getChildren().add(sadFace);
+        ImageView food = new ImageView(new Image("lk/play_tech/chat_application/assets/food.png"));
+        food.setFitWidth(30);
+        food.setFitHeight(30);
+        dialogVbox.getChildren().add(food);
         smile.setOnMouseClicked(event -> {
             txtMessage.setText(txtMessage.getText() + "☺");
         });
         heart.setOnMouseClicked(event -> {
             txtMessage.setText(txtMessage.getText() + "♥");
         });
-        sadFace.setOnMouseClicked(event -> {
-            txtMessage.setText(txtMessage.getText() + "☹");
+//        sadFace.setOnMouseClicked(event -> {
+//            txtMessage.setText(txtMessage.getText() + "☹");
+//        });
+        food.setOnMouseClicked(event -> {
+            txtMessage.setText(txtMessage.getText() + "\uD83C\uDF55");
         });
         emoji.getChildren().add(dialogVbox);
     }
